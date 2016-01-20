@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ptf.PtfActivity"></activity>
+        <activity android:name=".ptf.PtfClassicAcitivity"></activity>
+        <activity android:name=".ptf.TestHeaderActivity"></activity>
     </application>
 
 </manifest>
