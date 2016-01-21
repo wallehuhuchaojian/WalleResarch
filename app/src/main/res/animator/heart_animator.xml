@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="6000"
+    android:propertyName="trimPathStart"
+    android:valueFrom="0"
+
+    android:valueTo="1"
+    android:valueType="floatType" />
+<!--trimPathStart 表示绘制由结束点后退到开始点 trimPathEnd表示绘制由开始点到绘制结束点-->

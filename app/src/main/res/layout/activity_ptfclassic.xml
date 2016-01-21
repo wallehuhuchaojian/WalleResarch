@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#000000"
+    tools:context="com.example.walle.walleresarch.ptf.PtfClassicAcitivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#42746e"
+
+        ></RelativeLayout>
+<in.srain.cube.views.ptr.PtrClassicFrameLayout
+    android:layout_below="@+id/rl_title"
+    android:id="@+id/ptf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    cube_ptr:ptr_duration_to_close="500"
+    cube_ptr:ptr_duration_to_close_header="500"
+    cube_ptr:ptr_keep_header_when_refresh="true"
+    cube_ptr:ptr_pull_to_fresh="false"
+    cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+    cube_ptr:ptr_resistance="1.7"
+
+
+    >
+    <!-- ptr_duration_to_close:下拉后恢复至刷新状态所需时间ptr_duration_to_close_header：刷新完成后恢复所需时间-->
+    <ScrollView
+        android:id="@+id/fragment_block_menu_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ab4a4a">
+
+        <ListView
+            android:id="@+id/fragment_block_menu_block_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#98d1ac"
+           />
+    </ScrollView>
+
+
+</in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+</RelativeLayout>
