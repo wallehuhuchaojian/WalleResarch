@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.walle.walleresarch" >
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -22,6 +24,25 @@
         <activity android:name=".ptf.PtfClassicAcitivity"></activity>
         <activity android:name=".ptf.TestHeaderActivity"></activity>
         <activity android:name=".vector.VectorTestActivity"></activity>
+        <activity android:name=".datapicker.DatePickerActivity"></activity>
+        <activity android:name=".audio.AudioMyActivity"></activity>
+        <activity android:name=".audio.AudioTestActivity"></activity>
+        <activity android:name=".audio.AudioActivity"></activity>
+        <activity android:name=".draw.WaveActivity"></activity>
+        <activity android:name=".draw.DrawableActivity"></activity>
+        <activity android:name=".remoteController.MusicActivity"></activity>
+        <activity android:name=".music.MusicTest"
+
+            >
+            <intent-filter >
+                <action android:name="com.netease.push.action.client.MESSAGE"/>
+                <action android:name="com.netease.push.action.client.NEWID"/>
+                <action android:name="com.netease.push.action.client.METHOD"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <service android:name=".remoteController.MusicService"></service>
     </application>
 
 </manifest>
