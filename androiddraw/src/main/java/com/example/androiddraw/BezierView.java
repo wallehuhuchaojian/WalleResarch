@@ -21,7 +21,7 @@ public class BezierView extends View {
         this.maxH = high;
         paint=new Paint();
         paint.setColor(0xffffffff);
-        paint.setStrokeWidth(10);
+        paint.setStrokeWidth(2);
         paint.setStyle(Paint.Style.STROKE);
     }
 
