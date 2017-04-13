@@ -21,6 +21,7 @@ public class BezierView extends View {
         this.maxH = high;
         paint=new Paint();
         paint.setColor(0xffffffff);
+        paint.setStrokeWidth(10);
         paint.setStyle(Paint.Style.STROKE);
     }
 
@@ -72,14 +73,26 @@ public class BezierView extends View {
         Path path=new Path();
         int per=width/points.length;
         path.moveTo(p[0].getX(),p[0].getY());
-//        path.quadTo(p[0].getX(),p[0].getY(),p[2].getX(),p[2].getY(),p[1].getX(),p[1].getY());
-//        path.quadTo(p[1].getX(),p[1].getY(),p[3].getX(),p[3].getY(),p[2].getX(),p[2].getY());
-//        path.quadTo(p[2].getX(),p[2].getY(),p[4].getX(),p[4].getY(),p[3].getX(),p[3].getY());
+//        path.cubicTo((p[0].getX()+p[1].getX())/2,p[1].getY(),(p[2].getX()+p[1].getX())/2,p[1].getY(),p[1].getX(),p[1].getY());
+//        path.cubicTo((p[1].getX()+p[2].getX())/2,p[2].getY(),(p[3].getX()+p[2].getX())/2,p[2].getY(),p[2].getX(),p[2].getY());
+//        path.cubicTo((p[2].getX()+p[3].getX())/2,p[3].getY(),(p[4].getX()+p[3].getX())/2,p[3].getY(),p[3].getX(),p[3].getY());
 
-        path.quadTo(p[0].getX(),p[0].getY(),p[1].getX(),p[1].getY());
-        path.quadTo(p[1].getX(),p[1].getY(),p[2].getX(),p[2].getY());
-        path.quadTo(p[2].getX(),p[2].getY(),p[3].getX(),p[3].getY());
-        path.quadTo(p[3].getX(),p[3].getY(),p[4].getX(),p[4].getY());
+//        path.quadTo(p[0].getX(),p[0].getY(),p[1].getX(),p[1].getY());
+//        path.quadTo(p[1].getX(),p[1].getY(),p[2].getX(),p[2].getY());
+//        path.quadTo(p[2].getX(),p[2].getY(),p[3].getX(),p[3].getY());
+
+//        path.quadTo((p[0].getX()+p[1].getX())/2,p[0].getY(),p[1].getX(),p[1].getY());
+//        path.quadTo((p[1].getX()+p[2].getX())/2,p[1].getY(),p[2].getX(),p[2].getY());
+//        path.quadTo((p[2].getX()+p[3].getX())/2,p[2].getY(),p[3].getX(),p[3].getY());
+//        path.quadTo((p[3].getX()+p[4].getX())/2,p[3].getY(),p[4].getX(),p[4].getY());
+        path.cubicTo((p[0].getX()+p[1].getX())/2,p[0].getY(),(p[0].getX()+p[1].getX())/2,p[1].getY(),p[1].getX(),p[1].getY());
+        path.cubicTo((p[1].getX()+p[2].getX())/2,p[1].getY(),(p[1].getX()+p[2].getX())/2,p[2].getY(),p[2].getX(),p[2].getY());
+        path.cubicTo((p[2].getX()+p[3].getX())/2,p[2].getY(),(p[2].getX()+p[3].getX())/2,p[3].getY(),p[3].getX(),p[3].getY());
+        path.cubicTo((p[3].getX()+p[4].getX())/2,p[3].getY(),(p[3].getX()+p[4].getX())/2,p[4].getY(),p[4].getX(),p[4].getY());
+        canvas.drawCircle((p[0].getX()+p[1].getX())/2,p[0].getY(),width/100,paint);
+        canvas.drawCircle((p[1].getX()+p[2].getX())/2,p[0].getY(),width/100,paint);
+        canvas.drawCircle((p[2].getX()+p[3].getX())/2,p[0].getY(),width/100,paint);
+        canvas.drawCircle((p[3].getX()+p[4].getX())/2,p[0].getY(),width/100,paint);
         canvas.drawPath(path,paint);
 //        path.q
 

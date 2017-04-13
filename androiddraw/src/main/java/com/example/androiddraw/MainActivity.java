@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             setValue();
-            handler.sendEmptyMessageDelayed(1,5000);
+            handler.sendEmptyMessageDelayed(1,15000);
         }
     };
     private void setValue(){
